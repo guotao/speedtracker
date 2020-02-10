@@ -1,0 +1,20 @@
+---
+default: false
+interval: 6
+name: 'Dubai:Chrome'
+parameters:
+  connectivity: 'LTE'
+  location: 'Dubai:Chrome'
+  runs: 4
+  url: "https://kainy.gitlab.io/?from=SpeedTracker"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 900
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 2000
+    alerts: ["emailAlert"]
+---

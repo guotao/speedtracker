@@ -1,0 +1,20 @@
+---
+default: false
+interval: 6
+name: 'Dulles:Chrome'
+parameters:
+  connectivity: 'Cable'
+  location: 'Dulles:Chrome'
+  runs: 4
+  url: "https://kainy.gitlab.io/?from=SpeedTracker"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 600
+    alerts: ["emailAlert", "slackAlert"]
+  -
+    metric: firstPaint
+    max: 2000
+    alerts: ["slackAlert"]
+---

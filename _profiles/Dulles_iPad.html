@@ -1,0 +1,20 @@
+---
+default: false
+interval: 6
+name: 'Dulles_MotoG:Moto G - Chrome Canary'
+parameters:
+  connectivity: 'LTE'
+  location: 'Dulles_MotoG:Moto G - Chrome Canary'
+  runs: 4
+  url: "https://kainy.gitlab.io/?ATAG=SpeedTracker"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 900
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 2000
+    alerts: ["emailAlert"]
+---
